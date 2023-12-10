@@ -3,7 +3,13 @@
 void main() {
     string[] weapons = new string[] { "shortsword", "longsword", "mace" };
     Console.WriteLine();
-    Console.WriteLine("Roll the dice! Enter a number 4 to 20 to roll the dice. Type exit to leave.");
+    Console.WriteLine("Roll the dice! Enter a number 4 to 20 to roll the dice.");
+    Console.WriteLine("You may also enter one of the following weapons: ");
+    foreach (string weapon in weapons) {
+        Console.Write(weapon + " ");
+    }
+
+    Console.WriteLine("Type exit to leave.");
     var input = Console.ReadLine();
     if (input != null) {
         input = input.ToLower();
