@@ -1,7 +1,7 @@
 ﻿main();
 
 void main() {
-    string[] weapons = new string[] { "shortsword", "longsword" };
+    string[] weapons = new string[] { "shortsword", "longsword", "mace" };
     Console.WriteLine();
     Console.WriteLine("Roll the dice! Enter a number 4 to 20 to roll the dice. Type exit to leave.");
     var input = Console.ReadLine();
@@ -32,6 +32,9 @@ void weaponUsed(string input) {
             break;
         case "longsword":
             getDiceWithModifier(8, 2);
+            break;
+        case "mace":
+            getDiceWithModifier(6, 1);
             break;
     }
 }
