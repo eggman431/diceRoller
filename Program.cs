@@ -1,14 +1,15 @@
 ﻿main();
 
 void main() {
-    string[] weapons = new string[] { "shortsword", "longsword", "mace" };
+    string[] weapons = new string[] { "shortsword", "longsword", "mace", "spear" };
     Console.WriteLine();
     Console.WriteLine("Roll the dice! Enter a number 4 to 20 to roll the dice.");
-    Console.WriteLine("You may also enter one of the following weapons: ");
+    Console.WriteLine("You may also enter one of the following weapons:");
     foreach (string weapon in weapons) {
-        Console.Write(weapon + " ");
+        Console.WriteLine(weapon + " ");
     }
-
+    Console.WriteLine("");
+    Console.WriteLine("");
     Console.WriteLine("Type exit to leave.");
     var input = Console.ReadLine();
     if (input != null) {
@@ -37,6 +38,7 @@ void weaponUsed(string input) {
             getDiceWithModifier(6, 2);
             break;
         case "longsword":
+        case "spear":
             getDiceWithModifier(8, 2);
             break;
         case "mace":
